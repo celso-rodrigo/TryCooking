@@ -129,8 +129,7 @@
 }
 
 .favorite-btn {
-  filter: invert(47%) sepia(16%) saturate(2500%)
-    hue-rotate(-50deg) brightness(100%) contrast(8001%);
+  filter: invert(41%) sepia(86%) saturate(6190%) hue-rotate(345deg) brightness(104%) contrast(88%);
 }
 
 .copied-message {

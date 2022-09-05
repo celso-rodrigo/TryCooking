@@ -1,64 +1,94 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import { mapItensFood, mapItensDrinks } from '../helpers/mapItensDone';
+import UtilButtons from '../components/UtilButtons';
 import '../styles/DoneRecipes.css';
 
 function DoneRecipes() {
-  const [filter, setFilter] = useState();
-  const [showCopy, setShowCopy] = useState(false);
+  const [filter, setFilter] = useState('all');
   const findNone = 'Nenhuma Receita Concluida!';
 
-  const doneItensLocal = JSON.parse(localStorage.getItem('doneRecipes'));
-
-  const filterButtons = ({ target }) => {
-    const { name } = target;
-    if (name === 'all') setFilter();
-    if (name === 'food') setFilter('food');
-    if (name === 'drinks') setFilter('drinks');
+  const transform = (tags) => {
+    const arrTags = tags.toString().split(',');
+    return arrTags;
   };
 
+  const doneRecipeCard = (recipes) => (
+    <>
+      {
+        recipes
+          .map((element, index) => (
+            <div className="done-recipes-container" key={ element.id }>
+              <div className="done-recipes-card">
+                <div className="image-card">
+                  <Link to={ `foods/${element.id}` }>
+                    <img
+                      src={ element.image }
+                      alt="Receita concluída."
+                      data-testid={ `${index}-horizontal-image` }
+                      className="small-img"
+                    />
+                  </Link>
+                </div>
+
+                <div className="content-card">
+                  <Link to={ `foods/${element.id}` }>
+                    <h2
+                      data-testid={ `${index}-horizontal-name` }
+                    >
+                      { element.name }
+                    </h2>
+                  </Link>
+
+                  <h4
+                    data-testid={ `${index}-horizontal-top-text` }
+                  >
+                    { element.nationality.length
+                      ? `${element.nationality} - ${element.category}`
+                      : `${element.category}`}
+                  </h4>
+
+                  <p
+                    data-testid={ `${index}-horizontal-done-date` }
+                  >
+                    { element.doneDate }
+                  </p>
+
+                  {
+                    element.tags !== undefined ? (
+                      transform(element.tags).map((tag) => (
+                        <h4
+                          key={ tag }
+                          data-testid={ `${index}-${tag}-horizontal-tag` }
+                        >
+                          {tag}
+
+                        </h4>
+                      ))
+                    ) : null
+                  }
+
+                  <UtilButtons
+                    recipeObj={ element }
+                    isDrink={ element.type === 'drink' }
+                    copyText={ `http://localhost:3000/foods/${element.id}` }
+                  />
+
+                </div>
+              </div>
+            </div>
+          ))
+      }
+    </>
+  );
+
   const showItens = (infoFiltro) => {
-    if (infoFiltro === undefined) {
-      return doneItensLocal !== null ? (
-        <div>
-          {
-            doneItensLocal
-              .map((element, index) => (
-                element.type === 'food' ? (
-                  mapItensFood(element, index, setShowCopy)
-                ) : mapItensDrinks(element, index, setShowCopy)))
-          }
-        </div>
-      ) : <h4>{ findNone }</h4>;
-    }
-    if (infoFiltro === 'food') {
-      return doneItensLocal !== null ? (
-        <div>
-          {
-            doneItensLocal
-              .filter(
-                (element) => (element.type === 'food'),
-              )
-              .map((element, index) => (
-                mapItensFood(element, index, setShowCopy)
-              ))
-          }
-        </div>
-      ) : <h4>{ findNone }</h4>;
-    }
-    if (infoFiltro === 'drinks') {
-      return doneItensLocal !== null ? (
-        <div>
-          {
-            doneItensLocal
-              .filter(
-                (element) => (element.type === 'drink'),
-              )
-              .map((element, index) => (mapItensDrinks(element, index, setShowCopy)))
-          }
-        </div>
-      ) : <h4>{ findNone }</h4>;
-    }
+    const doneItensLocal = JSON.parse(localStorage.getItem('doneRecipes'));
+    if (doneItensLocal === null || !doneItensLocal.length) return <h4>{ findNone }</h4>;
+    const filteredItems = infoFiltro !== 'all'
+      ? doneItensLocal.filter((recipes) => recipes.type === infoFiltro)
+      : doneItensLocal;
+    return doneRecipeCard(filteredItems);
   };
 
   return (
@@ -70,7 +100,7 @@ function DoneRecipes() {
           type="button"
           name="all"
           data-testid="filter-by-all-btn"
-          onClick={ filterButtons }
+          onClick={ () => setFilter('all') }
         >
           All
         </button>
@@ -78,7 +108,7 @@ function DoneRecipes() {
           type="button"
           name="food"
           data-testid="filter-by-food-btn"
-          onClick={ filterButtons }
+          onClick={ () => setFilter('food') }
         >
           Food
         </button>
@@ -86,7 +116,7 @@ function DoneRecipes() {
           type="button"
           name="drinks"
           data-testid="filter-by-drink-btn"
-          onClick={ filterButtons }
+          onClick={ () => setFilter('drink') }
         >
           Drinks
         </button>
@@ -95,9 +125,6 @@ function DoneRecipes() {
       {/* Map Itens */}
       {showItens(filter)}
 
-      {
-        showCopy ? <h4>Link copied!</h4> : null
-      }
     </div>
   );
 }
