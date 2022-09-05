@@ -33,8 +33,8 @@ function RecipeDetails({ pagePath }) {
     const maxIngredients = maxAmount;
     let allIngredients = [];
     for (let index = 1; index <= maxIngredients; index += 1) {
-      const ingredient = `${recipeInfo[`strIngredient${index}`]}`;
-      const measure = `${recipeInfo[`strMeasure${index}`]}`;
+      const ingredient = recipeInfo[`strIngredient${index}`];
+      const measure = recipeInfo[`strMeasure${index}`];
       const recipeText = `${ingredient} - ${measure}`;
       if (ingredient !== 'null' && ingredient !== '' && measure !== 'null') {
         allIngredients = [...allIngredients, recipeText];
