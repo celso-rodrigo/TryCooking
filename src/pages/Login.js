@@ -1,39 +1,15 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Context from '../context/Context';
 import logo from '../images/logo.svg';
 import '../styles/Login.css';
 
 function Login(props) {
-  const [isValid, setValid] = useState(true);
+  const [valid, setValid] = useState(true);
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
 
-  const {
-    setPageType,
-  } = useContext(Context);
-
-  const validateEmail = () => {
-    const regexEmail = /^\w+([/.-]?\w+)*@\w+([/.-]?\w+)*(\.\w{2,3})+$/;
-    return !!(email.match(regexEmail));
-  };
-
-  const validatePassword = () => {
-    const passwordLength = 6;
-    return pass.length >= passwordLength;
-  };
-
-  const changeEmail = ({ target }) => {
-    const { value } = target;
-    setEmail(value);
-    setValid(!(validateEmail() && validatePassword()));
-  };
-
-  const changePass = ({ target }) => {
-    const { value } = target;
-    setPass(value);
-    setValid(!(validateEmail() && validatePassword()));
-  };
+  const { setPageType } = useContext(Context);
 
   const onClickLogin = () => {
     localStorage.setItem('user', JSON.stringify({ email }));
@@ -44,6 +20,17 @@ function Login(props) {
     const { history } = props;
     history.push('/foods');
   };
+
+  useEffect(() => {
+    const validateLogin = () => {
+      const regexEmail = /^\w+([/.-]?\w+)*@\w+([/.-]?\w+)*(\.\w{2,3})+$/g;
+      const validEmail = email.match(regexEmail) !== null;
+      const passwordLength = 6;
+      const validPassword = pass.length >= passwordLength;
+      setValid(validEmail && validPassword);
+    };
+    validateLogin();
+  }, [email, pass]);
 
   return (
     <div className="login-container">
@@ -62,7 +49,7 @@ function Login(props) {
             data-testid="email-input"
             placeholder="Insira o seu email..."
             value={ email }
-            onChange={ changeEmail }
+            onChange={ ({ target }) => setEmail(target.value) }
           />
           <input
             type="password"
@@ -70,14 +57,14 @@ function Login(props) {
             data-testid="password-input"
             placeholder="Insira sua senha..."
             value={ pass }
-            onChange={ changePass }
+            onChange={ ({ target }) => setPass(target.value) }
           />
         </div>
         <button
           className="login-button"
           type="button"
           data-testid="login-submit-btn"
-          disabled={ isValid }
+          disabled={ !valid }
           onClick={ onClickLogin }
         >
           Enter
@@ -88,8 +75,7 @@ function Login(props) {
 }
 
 Login.propTypes = {
-  history: PropTypes.shape([
-  ]).isRequired,
+  history: PropTypes.shape([]).isRequired,
 };
 
 export default Login;

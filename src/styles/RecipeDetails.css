@@ -51,35 +51,6 @@
   z-index: 8001;
 }
 
-/* Carousel */
-.Carousel {
-  padding-bottom: 80px;
-  padding-top: 30px;
-  width: 360px;
-}
-
-.carousel-item-container {
-  height: 180px;
-  position: relative;
-  width: 180px;
-}
-
-.carousel-item-container h3 {
-  background-image: linear-gradient(180deg, black 0%, transparent 100%);
-  color: white;
-  height: 80px;
-  padding-top: 5px;
-  position: absolute;
-  text-align: center;
-  width: 180px;
-}
-
-.carousel-item-container img {
-  height: 180px;
-}
-
-.carousel-control-prev, .carousel-control-next {
-  opacity: 100%;
-  top: 30%;
-  width: 30%;
+.carousel-root {
+  padding: 15px 0 65px 0;
 }

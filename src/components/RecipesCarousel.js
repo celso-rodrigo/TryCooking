@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Carousel from 'react-bootstrap/Carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { useHistory } from 'react-router-dom';
+import { Carousel } from 'react-responsive-carousel';
 
 function RecipesCarousel({ carouselInfo }) {
   const history = useHistory();
@@ -11,78 +12,41 @@ function RecipesCarousel({ carouselInfo }) {
     recommendations,
   } = carouselInfo;
 
-  const firstItemSet = 0;
-  const secondItemSet = 2;
-  const thirdItemSet = 4;
-
-  const getRecommendationsNameKey = (index) => {
-    if (detailsPageType === 'foods') return recommendations[index].strDrink;
-    return recommendations[index].strMeal;
-  };
-
-  const recommendationsImgKey = (index) => {
-    if (detailsPageType === 'foods') return recommendations[index].strDrinkThumb;
-    return recommendations[index].strMealThumb;
-  };
-
-  const recipeUlr = (recipe) => {
-    if (detailsPageType === 'foods') return `/drinks/${recipe.idDrink}`;
-    return `/foods/${recipe.idMeal}`;
-  };
-
-  const changePage = (newPathname) => {
-    history.push(newPathname);
+  const changePage = (recipeObj) => {
+    const pathname = detailsPageType === 'foods'
+      ? `/drinks/${recipeObj.idDrink}`
+      : `/foods/${recipeObj.idMeal}`;
+    history.push(pathname);
     window.location.reload();
   };
 
-  const carouselItem = (index) => (
-    <Carousel.Item>
-      <div>
-        <button
-          type="button"
-          onClick={ () => changePage(recipeUlr(recommendations[index])) }
-          data-testid={ `${index}-recomendation-card` }
-          className="carousel-item-container"
-        >
-          <h3 data-testid={ `${index}-recomendation-title` }>
-            { getRecommendationsNameKey(index) }
-          </h3>
-          <img
-            src={ recommendationsImgKey(index) }
-            alt="Recommended recipe"
-          />
-        </button>
-        <button
-          type="button"
-          onClick={ () => changePage(recipeUlr(recommendations[index + 1])) }
-          data-testid={ `${index + 1}-recomendation-card` }
-          className="carousel-item-container"
-        >
-          <h3 data-testid={ `${index + 1}-recomendation-title` }>
-            { getRecommendationsNameKey(index + 1) }
-          </h3>
-          <img
-            src={ recommendationsImgKey(index + 1) }
-            alt="Recommended recipe"
-          />
-        </button>
-      </div>
-    </Carousel.Item>
-  );
-
   return (
-    <div>
-      {recommendations.length && (
-
-        <Carousel
-          className="Carousel"
+    <Carousel infiniteLoop showThumbs={ false } emulateTouch>
+      {recommendations.map((recommendation) => (
+        <div
+          type="button"
+          key={ detailsPageType === 'foods'
+            ? recommendation.idDrink
+            : recommendation.idMeal }
         >
-          {carouselItem(firstItemSet)}
-          {carouselItem(secondItemSet)}
-          {carouselItem(thirdItemSet)}
-        </Carousel>
-      )}
-    </div>
+          <img
+            src={ detailsPageType === 'foods'
+              ? recommendation.strDrinkThumb
+              : recommendation.strMealThumb }
+            alt="Recommended recipe."
+          />
+          <button
+            type="button"
+            className="legend"
+            onClick={ () => changePage(recommendation) }
+          >
+            { detailsPageType === 'foods'
+              ? recommendation.strDrink
+              : recommendation.strMeal }
+          </button>
+        </div>
+      ))}
+    </Carousel>
   );
 }
 

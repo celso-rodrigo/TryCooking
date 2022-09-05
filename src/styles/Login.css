@@ -1,5 +1,5 @@
 .login-container {
-  background-image: url('https://images.pexels.com/photos/5720809/pexels-photo-5720809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-image: url("../images/loginBg.jpeg");
   background-size: cover;
   filter: saturate(1.4);
 }
@@ -8,8 +8,8 @@
   align-items: center;
   background-color: white;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.4)
-    0 2px 4px , rgba(0, 0, 0, 0.3) 0 7px 13px -3px , rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
   color: black;
   display: flex;
   filter: saturate(0.7);
@@ -26,16 +26,16 @@
 
 .logo-image {
   padding-left: 6px;
-  width: 100px;
+  width: 120px;
 }
 
 .login-form {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 75px;
+  gap: 60px;
   height: 640px;
-  padding-top: 120px;
+  padding-top: 80px;
   text-align: center;
   width: 360px;
 }
@@ -65,7 +65,6 @@
 }
 
 .login-button:disabled {
-  background-color: var(--brown-B);
   border: 1px solid white;
   color: white;
   opacity: 0.7;

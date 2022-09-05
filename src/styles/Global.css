@@ -56,7 +56,7 @@
   width: 50%;
 }
 
-.selected img, .header-buttons-container button img {
+.selected-category img, .header-buttons-container button img {
   filter: grayscale(1) invert(1);
 }
 
@@ -112,8 +112,7 @@
   padding: 5px 0;
   width: 50%;
 }
-
-.selected {
+.selected-category {
   background-color: var(--brown-A);
 }
 
