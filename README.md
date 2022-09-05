@@ -1,6 +1,6 @@
 # 🚧 README em construção 🚧
 
-# TryCooking
+<!-- # TryCooking
 A mobile recipes app application.
 
 *****
@@ -46,4 +46,4 @@ Apesar de ser o principal responsável por essas partes, todos nós nos ajudamos
 ![Project second gif]()
 
 
-![Project third gif]()
+![Project third gif]() -->
