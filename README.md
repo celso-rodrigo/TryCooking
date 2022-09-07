@@ -109,7 +109,7 @@ A mobile recipes app application.
 
 <details>
   <summary><h3>Images</h3></summary><br />
-  <img src="https://github.com/celso-rodrigo/TryCooking/blob/main/src/images/gif1.gif" alt="Project first gif">
-  <img src="https://github.com/celso-rodrigo/TryCooking/blob/main/src/images/gif2.gif" alt="Project second gif">
-  <img src="https://github.com/celso-rodrigo/TryCooking/blob/main/src/images/gif3.gif" alt="Project third gif">
+  <img src="https://github.com/celso-rodrigo/TryCooking/blob/main/src/images/gif1.gif" alt="Project first gif" width="295px" height="520">
+  <img src="https://github.com/celso-rodrigo/TryCooking/blob/main/src/images/gif2.gif" alt="Project second gif" width="295px" height="520">
+  <img src="https://github.com/celso-rodrigo/TryCooking/blob/main/src/images/gif3.gif" alt="Project third gif" width="295px" height="520">
 </details>
