@@ -1,49 +1,115 @@
-# 🚧 README em construção 🚧
-
-<!-- # TryCooking
+<h1>TryCooking</h1>
 A mobile recipes app application.
 
-*****
-:us:
+***
 
+<details>
+  <summary><h2>Read in English :us:</h2></summary><br />
+  <h3>About</h3>
+	<p>This application was originally developed together with <a href="https://github.com/iagoassis21" target="_blank">Iago Gonçalves</a>, <a href="https://github.com/mateussousaa" target="_blank">Mateus Sousa</a>, <a href="https://github.com/Kauan-Leite" target="_blank">Kauan Leite</a>, and <a href="https://github.com/flippelt" target="_blank">Felipe Lippelt</a> as the final project of the front-end module of <a href="https://www.betrybe.com" target="_blank">Trybe</a>. Our goal was to practice everything we have learned so far, soft and hard skills, to prove our skills and take the next step in our careers as developers.</p>
+  <p>I am very happy with the result that my group achieved. Although we didn't know each other well before the development of this project, we had great teamwork and managed to deliver the project with 100% of the requirements within the regular stipulated deadline.</p>
+	<br/>
+	<h3>My main contribution to this project was:</h3>
+	<ul>
+		<li>Recipes home page</li>
+		<li>Page with Recipe Specifications</li>
+		<li>Favorite/Share Buttons</li>
+		<li>CSS (Pair Programming with <a href="https://github.com/mateussousaa" target="_blank">Mateus Sousa</a>, <a href="https://github.com/Kauan-Leite" target="_blank">Kauan Leite</a></li>
+		<li>Login Page Refactoring (After Finishing the Project)</li>
+		<li>Full Recipes Page Refactoring (After Finishing the Project)</li>
+	</ul>
+	<p>Despite being primarily responsible for these parts, we all help and support each other a lot. There is a little bit of each other's touch throughout the project.</p>
+	<br/>
+  <h3>Functionalities</h3>
+  <ul>
+    <li>Login page</li>
+    <li>Main page (foods and drinks)</li>
+    <li>Filters by category, name, and type.</li>
+    <li>Recipe Specifications Page</li>
+    <li>Share/favorite buttons</li>
+    <li>Recipe in progress</li>
+    <li>Favorites page</li>
+    <li>Finished recipes page</li>
+    <li>Profile page</li>
+  </ul>  
+  <br/>
+  <h3>Installation guide</h3> 
+  <ol>
+    <li>
+      <p>Install the repository</p>
+      <pre>git clone git@github.com:celso-rodrigo/TryCooking.git</pre>
+    </li>
+    <li>
+      <p>Open the repository folder</p>
+    </li>
+    <li>
+      <p>Install NPM packages</p>
+      <pre>npm install</pre>
+    </li>
+    <li>
+      <p>Start the project</p>
+      <pre>npm start</pre>
+    </li>
+  </ol>
+</details>
 
-*****
-:brazil:
-Está aplicação foi originalmente desenvolvida em conjunto com [Iago Gonçalves](https://github.com/iagoassis21), [Kauan Leite](https://github.com/Kauan-Leite), [Mateus Sousa](https://github.com/mateussousaa), e [Felipe Lippelt](https://github.com/flippelt) como projeto final do módulo de front-end da [Trybe](https://www.betrybe.com). Nosso objetivo era colocar em prática tudo que aprendemos até aquele momento, seja em soft ou hard skills, para provar nossas competências e dar o próximo passo na nossa formação como dev.
+***
 
-## Desenvolvimento:
-Durante o projeto, sempre nos reunimos no início do dia para alinhar a equipe. Utilizamos principalmente de Kanban para dar visibilidade do que cada um dos membros e pair programming para ajudarmos uns aos outros com dúvidas, dificuldades ou durante momentos de code reviews.
-A [Trybe](https://www.betrybe.com) Fez a divisão dos grupos, e forneceu os arquivos necessários para desenvolvimento do projeto, assim como as especificações dele. Apesar disso, tivemos total autonomia sobre a lógica utilizada e utilizamos conteúdos externos para deixar nosso projeto ainda mais com nossa cara.
-Fico muito feliz com o resultado que meu grupo alcançou, apesar de não nos conhecermos bem anteriormente ao desenvolvimento deste projeto, fizemos um ótimo trabalho em equipe e conseguimos entregar o projeto com 100% dos requisitos durante o prazo regular estipulado.
+<details>
+	<summary><h2>Leia em português :brazil:</h2></summary><br />
+	<h3>Sobre</h3>
+	<p>Está aplicação foi originalmente desenvolvida em conjunto com <a href="https://github.com/iagoassis21" target="_blank">Iago Gonçalves</a>, <a href="https://github.com/mateussousaa" target="_blank">Mateus Sousa</a>, <a href="https://github.com/Kauan-Leite" target="_blank">Kauan Leite</a>, e <a href="https://github.com/flippelt" target="_blank">Felipe Lippelt</a> como projeto final do módulo de front-end da <a href="https://www.betrybe.com" target="_blank">Trybe</a>. Nosso objetivo era colocar em prática tudo que aprendemos até aquele momento, seja em soft ou hard skills, para provar nossas competências e dar o próximo passo na nossa formação como dev.</p>
+	<p>Fico muito feliz com o resultado que meu grupo alcançou, apesar de não nos conhecermos bem anteriormente ao desenvolvimento deste projeto, fizemos um ótimo trabalho em equipe e conseguimos entregar o projeto com 100% dos requisitos durante o prazo regular estipulado.</p>
+	<br/>
+	<h3>Minha principal contribuição nesse projeto foi:</h3>
+	<ul>
+		<li>Página de principal de receitas</li>
+		<li>Página de detalhes da receita</li>
+		<li>Botões de Favoritar/Compartilhar</li> 
+		<li>CSS (Pair programming com <a href="https://github.com/mateussousaa" target="_blank">Mateus Sousa</a> e <a href="https://github.com/Kauan-Leite" target="_blank">Kauan Leite</a></li>
+		<li>Refatoração de página de login (Após término)</li>
+		<li>Refatoração de página de receitas concluídas (Após término)</li>
+	</ul>
+	<p>Apesar de ser o principal responsável por essas partes, todos nós nos ajudamos e apoiamos muito. Existe um pouco do toque de cada um em todo o projeto.</p>
+	<br/>
+	<h3>Funcionalidades:</h3>
+	<ul>
+		<li>Página de login</li>
+		<li>Página principal de receitas (comidas/bebidas)</li>
+		<li>Filtros por categoria e nome e tipo</li> 
+		<li>Página de detalhes da receita</li>
+		<li>Botões de compartilhar/favoritar</li>
+		<li>Página de receita em progresso</li>
+		<li>Página de favoritos</li>
+		<li>Página de concluídos</li>
+		<li>Página de perfil</li>
+	</ul>
+	<br/>
+	<h3>Guia de instalação</h3> 
+	<ol>
+		<li>
+		<p>Instale o repositório</p>
+		<pre>git clone git@github.com:celso-rodrigo/whatToDo.git</pre>
+		</li>
+		<li>
+		<p>Abra a pasta do repositório</p>
+		</li>
+		<li>
+		<p>Instale as dependências</p>
+		<pre>git clone git@github.com:celso-rodrigo/TryCooking.git</pre>
+		</li>
+		<li>
+		<p>Inicie o projetot</p>
+		<pre>npm start</pre>
+		</li>
+	</ol>
+</details>
 
-Minha principal contribuição nesse projeto foi:
-- Página de principal de receitas
-- Página de detalhes da receita
-- Botões de Favoritar/Compartilhar 
-- CSS (Pair programming com [Kauan Leite](https://github.com/Kauan-Leite), [Mateus Sousa](https://github.com/mateussousaa))
-- Refatoração de página de login (Após término)
-- Refatoração de página de receitas concluídas (Após término)
+***
 
-Apesar de ser o principal responsável por essas partes, todos nós nos ajudamos e apoiamos muito, existe um pouco do toque de cada um em todo o projeto.
-
-## Funcionalidades:
-- Página de login
-- Página principal de receitas (comidas/bebidas)
-- Filtros por categoria e nome e tipo
-- Página de detalhes da receita
-- Botões de compartilhar/favoritar
-- Página de receita em progresso
-- Página de favoritos
-- Página de concluídos
-- Página de perfil
-
-
-*****
-
-![Project first gif]()
-
-
-![Project second gif]()
-
-
-![Project third gif]() -->
+<details>
+  <summary><h3>Images</h3></summary><br />
+  <img src="https://github.com/celso-rodrigo/TryCooking/blob/main/src/images/gif1.gif" alt="Project first gif">
+  <img src="https://github.com/celso-rodrigo/TryCooking/blob/main/src/images/gif2.gif" alt="Project second gif">
+  <img src="https://github.com/celso-rodrigo/TryCooking/blob/main/src/images/gif3.gif" alt="Project third gif">
+</details>
