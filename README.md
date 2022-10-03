@@ -89,17 +89,17 @@ A mobile recipes app application.
 	<ol>
 		<li>
 		<p>Instale o repositório</p>
-		<pre>git clone git@github.com:celso-rodrigo/whatToDo.git</pre>
+		<pre>git clone git@github.com:celso-rodrigo/TryCooking.git</pre>
 		</li>
 		<li>
 		<p>Abra a pasta do repositório</p>
 		</li>
 		<li>
 		<p>Instale as dependências</p>
-		<pre>git clone git@github.com:celso-rodrigo/TryCooking.git</pre>
+		<pre>npm install</pre>
 		</li>
 		<li>
-		<p>Inicie o projetot</p>
+		<p>Inicie o projeto</p>
 		<pre>npm start</pre>
 		</li>
 	</ol>
