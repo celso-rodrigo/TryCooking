@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tryCooking/static/css/main.95b7e4e8.css",
+    "main.js": "/tryCooking/static/js/main.c564c200.js",
+    "static/media/loginBg.jpeg": "/tryCooking/static/media/loginBg.257586fd9afce25bc86f.jpeg",
+    "static/media/shareIcon.svg": "/tryCooking/static/media/shareIcon.0162aa71578ef591eb531dcb30801f1f.svg",
+    "static/media/profileIcon.svg": "/tryCooking/static/media/profileIcon.27392b79560b07e515b2115585e4fc34.svg",
+    "static/media/whiteHeartIcon.svg": "/tryCooking/static/media/whiteHeartIcon.6690d94e688d445712c855c7ded7389b.svg",
+    "static/media/searchIcon.svg": "/tryCooking/static/media/searchIcon.361eec656b197de33ae9ee000c69601a.svg",
+    "static/media/blackHeartIcon.svg": "/tryCooking/static/media/blackHeartIcon.f4563148a53687f9befe2ce741dfdedb.svg",
+    "static/media/logo.svg": "/tryCooking/static/media/logo.03943578c9216ad2f50543dc141c3322.svg",
+    "index.html": "/tryCooking/index.html",
+    "static/media/mealIcon.svg": "/tryCooking/static/media/mealIcon.2bcd9ac7fe544f4976a8f9a1f57375da.svg",
+    "static/media/drinkIcon.svg": "/tryCooking/static/media/drinkIcon.8d74edc07a0eb03c7b070f5f03903958.svg",
+    "main.95b7e4e8.css.map": "/tryCooking/static/css/main.95b7e4e8.css.map",
+    "main.c564c200.js.map": "/tryCooking/static/js/main.c564c200.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.95b7e4e8.css",
+    "static/js/main.c564c200.js"
+  ]
+}
