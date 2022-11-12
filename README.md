@@ -36,7 +36,7 @@ A mobile recipes app application.
   <h3>Installation guide</h3> 
   <ol>
     <li>
-      <p>Install the repository</p>
+      <p>Clone the repository</p>
       <pre>git clone git@github.com:celso-rodrigo/TryCooking.git</pre>
     </li>
     <li>
@@ -88,7 +88,7 @@ A mobile recipes app application.
 	<h3>Guia de instalação</h3> 
 	<ol>
 		<li>
-		<p>Instale o repositório</p>
+		<p>Clone o repositório</p>
 		<pre>git clone git@github.com:celso-rodrigo/TryCooking.git</pre>
 		</li>
 		<li>
