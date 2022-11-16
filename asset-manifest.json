@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TryCooking/static/css/main.07db73bf.css",
-    "main.js": "/TryCooking/static/js/main.a52b7dfa.js",
+    "main.js": "/TryCooking/static/js/main.b7525d27.js",
     "static/media/loginBg.jpeg": "/TryCooking/static/media/loginBg.257586fd9afce25bc86f.jpeg",
     "static/media/shareIcon.svg": "/TryCooking/static/media/shareIcon.0162aa71578ef591eb531dcb30801f1f.svg",
     "static/media/profileIcon.svg": "/TryCooking/static/media/profileIcon.27392b79560b07e515b2115585e4fc34.svg",
@@ -13,10 +13,10 @@
     "static/media/mealIcon.svg": "/TryCooking/static/media/mealIcon.2bcd9ac7fe544f4976a8f9a1f57375da.svg",
     "static/media/drinkIcon.svg": "/TryCooking/static/media/drinkIcon.8d74edc07a0eb03c7b070f5f03903958.svg",
     "main.07db73bf.css.map": "/TryCooking/static/css/main.07db73bf.css.map",
-    "main.a52b7dfa.js.map": "/TryCooking/static/js/main.a52b7dfa.js.map"
+    "main.b7525d27.js.map": "/TryCooking/static/js/main.b7525d27.js.map"
   },
   "entrypoints": [
     "static/css/main.07db73bf.css",
-    "static/js/main.a52b7dfa.js"
+    "static/js/main.b7525d27.js"
   ]
 }
